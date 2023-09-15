@@ -12,7 +12,7 @@ corp_secret = config['Wechat']['corp_secret']
 agent_id = config['Wechat']['agent_id']
 get_URL = 'https://www.zhaodaka.cn'
 
-# initial date to current date, format: 2020年01月01日
+# initial date to current date, format: 2023年01月01日
 send_date = datetime.datetime.now()
 send_date_formatted = send_date.strftime('%Y年%m月%d日')
 send_date_plus_5 = send_date + datetime.timedelta(days=5)
@@ -29,7 +29,7 @@ def get_access_token(corp_id, corp_secret):
 
 def wechat_push_text(agent_id, access_token, message):
     data = {
-        "touser": "Lijiangbo",
+        "touser": "Li",
         "msgtype": 'text',
         "agentid": agent_id,
         "text": {
@@ -48,7 +48,7 @@ def wechat_push_text(agent_id, access_token, message):
     
 def wechat_push_card(agent_id, access_token, message):
     data={
-        "touser": "Lijiangbo",
+        "touser": "Li",
         "msgtype": "textcard",
         "agentid": agent_id,
         "textcard": message,
